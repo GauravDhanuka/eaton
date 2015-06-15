@@ -1,3 +1,7 @@
-%h1 Edit Recipe
-
+.panel.panel-default
+	.panel-heading
+		%h1.text-center Edit Recipe
+		
 = render 'form'
+	
+= link_to "Cancel", recipe_path, class: "btn btn-default"	
