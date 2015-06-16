@@ -1,7 +1,9 @@
 .panel.panel-default
 	.panel-heading
 		%h1.text-center Edit Recipe
-		
+- if @recipe.image.present?
+	= image_tag @recipe.image.url(:small), class: "recipe_image"
+%br	
 = render 'form'
-	
+%br	
 = link_to "Cancel", recipe_path, class: "btn btn-default"	
